@@ -1,0 +1,34 @@
+[
+    {
+        "model": "levelupapi.gamer",
+        "pk": 1,
+        "fields": {
+            "uid": 1,
+            "bio": "me"
+        }
+    },
+    {
+        "model": "levelupapi.gamer",
+        "pk": 2,
+        "fields": {
+            "uid": 2,
+            "bio": "you"
+        }
+    },
+    {
+        "model": "levelupapi.gamer",
+        "pk": 3,
+        "fields": {
+            "uid": 3,
+            "bio": "bruh"
+        }
+    },
+    {
+        "model": "levelupapi.gamer",
+        "pk": 4,
+        "fields": {
+            "uid": 4,
+            "bio": "hur"
+        }
+    }
+]

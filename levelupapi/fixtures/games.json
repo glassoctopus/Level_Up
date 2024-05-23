@@ -1,0 +1,86 @@
+[
+    {
+        "model": "levelupapi.game",
+        "pk": 1,
+        "fields": {
+            "game_type": 1,
+            "title": "Risk",
+            "maker": "Albert Lamorisse",
+            "gamer": 1,
+            "number_of_players": 8,
+            "skill_level": 5
+        }
+    },
+    {
+        "model": "levelupapi.game",
+        "pk": 2,
+        "fields": {
+            "game_type": 1,
+            "title": "Monopoly",
+            "maker": "Lizzie Magie",
+            "gamer": 2,
+            "number_of_players": 8,
+            "skill_level": 5
+        }
+    },
+    {
+        "model": "levelupapi.game",
+        "pk": 3,
+        "fields": {
+            "game_type": 1,
+            "title": "Moksha Patam",
+            "maker": "Aliens or a smart human",
+            "gamer": 4,
+            "number_of_players": 8,
+            "skill_level": 5
+        }
+    },
+    {
+        "model": "levelupapi.game",
+        "pk": 4,
+        "fields": {
+            "game_type": 1,
+            "title": "Royal Game of Ur",
+            "maker": "Aliens or a smart human",
+            "gamer": 2,
+            "number_of_players": 2,
+            "skill_level": 5
+        }
+    },
+    {
+        "model": "levelupapi.game",
+        "pk": 5,
+        "fields": {
+            "game_type": 2,
+            "title": "Dungeons & Dragons",
+            "maker": "Gary Gygax",
+            "gamer": 1,
+            "number_of_players": 13,
+            "skill_level": 5
+        }
+    },
+    {
+        "model": "levelupapi.game",
+        "pk": 6,
+        "fields": {
+            "game_type": 2,
+            "title": "Rifts",
+            "maker": "Kevin Siembieda",
+            "gamer": 4,
+            "number_of_players": 4,
+            "skill_level": 5
+        }
+    },
+    {
+        "model": "levelupapi.game",
+        "pk": 7,
+        "fields": {
+            "game_type": 3,
+            "title": "Runscape",
+            "maker": "Some British goofballs",
+            "gamer": 1,
+            "number_of_players": "1000",
+            "skill_level": 5
+        }
+    }
+]

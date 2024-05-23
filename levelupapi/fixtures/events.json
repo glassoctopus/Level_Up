@@ -1,0 +1,46 @@
+[
+    {
+        "model": "levelupapi.event",
+        "pk": 1,
+        "fields": {
+            "game": 1,
+            "description": "Risk it all to rule the world through military might!",
+            "date": "2024-5-16",
+            "time": "14:30:00",
+            "organizer": 1
+        }
+    },
+    {
+        "model": "levelupapi.event",
+        "pk": 2,
+        "fields": {
+            "game": 2,
+            "description": "Conquest through Capitalism!",
+            "date": "2024-5-17",
+            "time": "14:30:00",
+            "organizer": 2
+        }
+    },
+    {
+        "model": "levelupapi.event",
+        "pk": 3,
+        "fields": {
+            "game": 3,
+            "description": "Snakes and ladders Old Skol version!",
+            "date": "2024-5-18",
+            "time": "14:30:00",
+            "organizer": 3
+        }
+    },
+    {
+        "model": "levelupapi.event",
+        "pk": 4,
+        "fields": {
+            "game": 4,
+            "description": "An old school race, prehistoric style!",
+            "date": "2024-5-19",
+            "time": "14:30:00",
+            "organizer": 4
+        }
+    }
+]
