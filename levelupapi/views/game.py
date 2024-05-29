@@ -30,7 +30,7 @@ class GameView(ViewSet):
         Returns
             Response -- JSON serialized game instance
         """
-        gamer = Gamer.objects.get(pk=request.data["userId"])
+        gamer = Gamer.objects.get(uid=request.data["userId"])
         game_type = Game_type.objects.get(pk=request.data["game_type"])
 
         game = Game.objects.create(

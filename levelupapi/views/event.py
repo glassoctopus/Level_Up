@@ -24,11 +24,7 @@ class EventView(ViewSet):
         return Response(serializer.data)
     
     def create(self, request):
-        """Handle POST operations
-
-        Returns
-            Response -- JSON serialized game instance
-        """
+        """Handle POST operations, Returns: Response -- JSON serialized game instance"""
         gamer = Gamer.objects.get(pk=request.data["gamer"])
         game = Game.objects.get(pk=request.data["game"])
 
@@ -58,9 +54,22 @@ class EventView(ViewSet):
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
+class GameSerializer(serializers.ModelSerializer):
+    """JSON serializer for games"""
+    class Meta:
+        model = Game
+        fields = '__all__'
+
+class GamerSerializer(serializers.ModelSerializer):
+    """JSON serializer for gamers"""
+    class Meta:
+        model = Gamer
+        fields = '__all__'
 class EventSerializer(serializers.ModelSerializer):
-    """JSON serializer for game types
-    """
+    """JSON serializer for game types"""
+    game = GameSerializer()
+    organizer = GamerSerializer()
+
     class Meta:
         model = Event
         fields = ('game', 'description', 'date', 'time', 'organizer')
