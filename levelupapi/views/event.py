@@ -25,7 +25,7 @@ class EventView(ViewSet):
     
     def create(self, request):
         """Handle POST operations, Returns: Response -- JSON serialized game instance"""
-        gamer = Gamer.objects.get(pk=request.data["gamer"])
+        gamer = Gamer.objects.get(pk=request.data["id"])
         game = Game.objects.get(pk=request.data["game"])
 
         event = Event.objects.create(
