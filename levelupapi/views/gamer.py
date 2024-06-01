@@ -40,4 +40,4 @@ class GamerSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Gamer
-        fields = ('uid', 'bio')
+        fields = ('uid', 'bio', 'id')
