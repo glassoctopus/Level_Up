@@ -25,8 +25,8 @@ class EventView(ViewSet):
     
     def create(self, request):
         """Handle POST operations, Returns: Response -- JSON serialized game instance"""
-        gamer = Gamer.objects.get(pk=request.data["id"])
-        game = Game.objects.get(pk=request.data["game"])
+        gamer = Gamer.objects.get(uid=request.data["uid"])
+        game = Game.objects.get(title=request.data["title"])
 
         event = Event.objects.create(
             game = game,
@@ -39,9 +39,11 @@ class EventView(ViewSet):
         return Response(serializer.data)
     
     def update(self, request, pk):
-        
-        game = Game.objects.get(pk=request.data["game"])
-        gamer = Gamer.objects.get(pk=request.data["uid"])
+        try:
+            game = Game.objects.get(pk=request.data["title"])
+            gamer = Gamer.objects.get(pk=request.data["uid"])
+        except KeyError:
+            return Response({"error": "ID not provided in request."}, status=status.HTTP_400_BAD_REQUEST)
 
         event = Event.objects.get(pk=pk)
         event.game = game
@@ -72,4 +74,4 @@ class EventSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Event
-        fields = ('game', 'description', 'date', 'time', 'organizer')
+        fields = ('game', 'description', 'date', 'time', 'organizer', 'id')
