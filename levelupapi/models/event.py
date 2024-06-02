@@ -10,3 +10,12 @@ class Event(models.Model):
     date = models.DateField(default=datetime.date(2024, 5, 13))
     time = models.TimeField(default=datetime.time(12, 0, 0))
     organizer = models.ForeignKey(Gamer, on_delete=models.CASCADE)
+    joined = models.BooleanField(default=False)
+
+    @property
+    def joined(self):
+        return self.__joined
+
+    @joined.setter
+    def joined(self, value):
+        self.__joined = value
