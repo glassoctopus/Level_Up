@@ -114,17 +114,15 @@ class EventView(ViewSet):
         except Exception as e:
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-
-class GameSerializer(serializers.ModelSerializer):
-    """JSON serializer for games"""
-    class Meta:
-        model = Game
-        fields = '__all__'
-
 class GamerSerializer(serializers.ModelSerializer):
     """JSON serializer for gamers"""
     class Meta:
         model = Gamer
+        fields = '__all__'
+class GameSerializer(serializers.ModelSerializer):
+    """JSON serializer for gamers"""
+    class Meta:
+        model = Game
         fields = '__all__'
 class EventSerializer(serializers.ModelSerializer):
     """JSON serializer for game types"""
